@@ -1,0 +1,13 @@
+image: mcr.microsoft.com/dotnet/core/sdk:6.0
+
+stages:
+  - build
+  
+# Build Stage: Restore dependencies and build the project
+build:
+  stage: build
+  script:
+    - dotnet restore
+    - dotnet build --configuration Release --no-restore
+  only:
+    - main
