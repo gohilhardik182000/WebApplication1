@@ -11,3 +11,10 @@ build:
     - dotnet build --configuration Release --no-restore
   only:
     - main
+
+publish:
+  stage: publish
+  script:
+    - dotnet publish --configuration Release --output out
+  only:
+    - main
