@@ -2,6 +2,7 @@ image: mcr.microsoft.com/dotnet/core/sdk:6.0
 
 stages:
   - build
+  - publish
   
 # Build Stage: Restore dependencies and build the project
 build:
